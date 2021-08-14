@@ -1,16 +1,25 @@
 PODS:
   - GraphQL-Swift (1.0.36)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
 
 DEPENDENCIES:
   - GraphQL-Swift
+  - RxRelay
+  - RxSwift
 
 SPEC REPOS:
   trunk:
     - GraphQL-Swift
+    - RxRelay
+    - RxSwift
 
 SPEC CHECKSUMS:
   GraphQL-Swift: 8c19504daa071f8bcb1781fdeac1f4587b4abee9
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: 51c349394e2c600165f40a6696d5e5743b5dfbe7
+PODFILE CHECKSUM: e3a1e02b3ef1ae5a11aa81b22b95784c7f8b5af4
 
 COCOAPODS: 1.10.1

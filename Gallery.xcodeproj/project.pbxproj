@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,13 @@
 		570CB47426C7D0CC006F4374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570CB46E26C7D0CC006F4374 /* Assets.xcassets */; };
 		570CB47526C7D0CC006F4374 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570CB47026C7D0CC006F4374 /* Preview Assets.xcassets */; };
 		570CB47726C7DB45006F4374 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB47626C7DB45006F4374 /* MainView.swift */; };
+		570CB47926C7E5D1006F4374 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB47826C7E5D1006F4374 /* Config.swift */; };
+		570CB48026C7E8D2006F4374 /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB47F26C7E8D2006F4374 /* ApiServiceProtocol.swift */; };
+		570CB48226C7E8E3006F4374 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48126C7E8E3006F4374 /* ApiService.swift */; };
+		570CB48426C7F18E006F4374 /* DefaultQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48326C7F18E006F4374 /* DefaultQuery.swift */; };
+		570CB48626C7F411006F4374 /* DefaultAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48526C7F411006F4374 /* DefaultAuth.swift */; };
+		570CB48A26C7F694006F4374 /* DefaultApiDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48926C7F694006F4374 /* DefaultApiDefinition.swift */; };
+		570CB48C26C80049006F4374 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48B26C80048006F4374 /* MainViewModel.swift */; };
 		77B03336E68746E4AEC05C19 /* Pods_Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7AB03774765386F871892D /* Pods_Gallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +29,13 @@
 		570CB46E26C7D0CC006F4374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		570CB47026C7D0CC006F4374 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		570CB47626C7DB45006F4374 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		570CB47826C7E5D1006F4374 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		570CB47F26C7E8D2006F4374 /* ApiServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocol.swift; sourceTree = "<group>"; };
+		570CB48126C7E8E3006F4374 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		570CB48326C7F18E006F4374 /* DefaultQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultQuery.swift; sourceTree = "<group>"; };
+		570CB48526C7F411006F4374 /* DefaultAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuth.swift; sourceTree = "<group>"; };
+		570CB48926C7F694006F4374 /* DefaultApiDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultApiDefinition.swift; sourceTree = "<group>"; };
+		570CB48B26C80048006F4374 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5A7AB03774765386F871892D /* Pods_Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BDE4F7F13A99FB5B8CA1A4 /* Pods-Gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gallery.debug.xcconfig"; path = "Target Support Files/Pods-Gallery/Pods-Gallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,8 +75,11 @@
 		570CB46726C7D0CC006F4374 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				570CB47B26C7E63D006F4374 /* Managers */,
+				570CB47A26C7E633006F4374 /* Services */,
 				570CB46826C7D0CC006F4374 /* UI */,
 				570CB46B26C7D0CC006F4374 /* GalleryApp.swift */,
+				570CB47826C7E5D1006F4374 /* Config.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -79,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				570CB47626C7DB45006F4374 /* MainView.swift */,
+				570CB48B26C80048006F4374 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -100,6 +118,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		570CB47A26C7E633006F4374 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				570CB47C26C7E7D5006F4374 /* Api */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		570CB47B26C7E63D006F4374 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		570CB47C26C7E7D5006F4374 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				570CB47F26C7E8D2006F4374 /* ApiServiceProtocol.swift */,
+				570CB48126C7E8E3006F4374 /* ApiService.swift */,
+				570CB48326C7F18E006F4374 /* DefaultQuery.swift */,
+				570CB48526C7F411006F4374 /* DefaultAuth.swift */,
+				570CB48926C7F694006F4374 /* DefaultApiDefinition.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		BE31354FCC0BF0FEEF7CB0EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +159,6 @@
 				77BDE4F7F13A99FB5B8CA1A4 /* Pods-Gallery.debug.xcconfig */,
 				0D4DA2C82E541722A18B7D58 /* Pods-Gallery.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -231,8 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				570CB48426C7F18E006F4374 /* DefaultQuery.swift in Sources */,
+				570CB48026C7E8D2006F4374 /* ApiServiceProtocol.swift in Sources */,
+				570CB48226C7E8E3006F4374 /* ApiService.swift in Sources */,
 				570CB47226C7D0CC006F4374 /* GalleryApp.swift in Sources */,
 				570CB47726C7DB45006F4374 /* MainView.swift in Sources */,
+				570CB48A26C7F694006F4374 /* DefaultApiDefinition.swift in Sources */,
+				570CB47926C7E5D1006F4374 /* Config.swift in Sources */,
+				570CB48626C7F411006F4374 /* DefaultAuth.swift in Sources */,
+				570CB48C26C80049006F4374 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

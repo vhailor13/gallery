@@ -9,8 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     
+    @ObservedObject private var viewModel = MainViewModel()
+    
     var body: some View {
-        Text("Main")
+        return Text("Main")
     }
     
 }
