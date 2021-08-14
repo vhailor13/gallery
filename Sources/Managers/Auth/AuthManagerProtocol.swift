@@ -10,5 +10,5 @@ import RxSwift
 protocol AuthManagerProtocol {
     var isAuthorized: Observable<Bool> { get }
     
-    func login(email: String, password: String) -> Completable
+    func login(email: String, password: String)
 }

@@ -15,6 +15,24 @@ struct AuthView<T: AuthViewModelProtocol>: View {
     @ObservedObject var viewModel: T
     
     var body: some View {
-        Text("Auth")
+        ZStack {
+            //Color.white
+            VStack {
+                VStack(alignment: .leading) {
+                    TextField("Email", text: viewModel.email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    SecureField("Password", text: viewModel.password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }.padding(EdgeInsets(top: 0.0, leading: 12.0, bottom: 0.0, trailing: 12.0))
+                
+                Button {
+                    viewModel.signIn()
+                } label: {
+                    Text("Sign In")
+                        .foregroundColor(.blue)
+                }
+            }
+        }
     }
 }
