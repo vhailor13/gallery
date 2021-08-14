@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  AuthView.swift
 //  Gallery
 //
 //  Created by Victor Sukochev on 14.08.2021.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct MainView<T: MainViewModelProtocol>: View {
-    
+struct AuthView<T: AuthViewModelProtocol>: View {
     init(_ viewModel: T) {
         self.viewModel = viewModel
     }
@@ -16,7 +15,6 @@ struct MainView<T: MainViewModelProtocol>: View {
     @ObservedObject var viewModel: T
     
     var body: some View {
-        return Text("Main")
+        Text("Auth")
     }
-    
 }

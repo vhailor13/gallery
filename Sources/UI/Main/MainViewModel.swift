@@ -8,10 +8,10 @@
 import Combine
 import RxSwift
 
-class MainViewModel: ObservableObject {
+class MainViewModel: MainViewModelProtocol {
     private let disposeBag = DisposeBag()
     
     init() {
-
+        
     }
 }

@@ -24,7 +24,7 @@ class ApiService: ApiServiceProtocol {
     private init() {}
     
     
-    func login(email: String, password: String) -> Completable  {
+    func login(email: String, password: String) -> Completable {
         return Completable.create { completable in
             let query = DefaultQuery("""
                 mutation {

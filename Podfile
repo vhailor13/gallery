@@ -6,5 +6,6 @@ target 'Gallery' do
 	pod 'GraphQL-Swift'
 	pod 'RxSwift'
 	pod 'RxRelay'
+	pod 'Swinject'
 
 end
