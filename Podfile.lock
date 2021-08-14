@@ -1,0 +1,16 @@
+PODS:
+  - GraphQL-Swift (1.0.36)
+
+DEPENDENCIES:
+  - GraphQL-Swift
+
+SPEC REPOS:
+  trunk:
+    - GraphQL-Swift
+
+SPEC CHECKSUMS:
+  GraphQL-Swift: 8c19504daa071f8bcb1781fdeac1f4587b4abee9
+
+PODFILE CHECKSUM: 51c349394e2c600165f40a6696d5e5743b5dfbe7
+
+COCOAPODS: 1.10.1
