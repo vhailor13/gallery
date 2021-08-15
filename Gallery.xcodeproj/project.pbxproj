@@ -27,6 +27,9 @@
 		570CB49F26C82176006F4374 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB49E26C82176006F4374 /* RootView.swift */; };
 		570CB4A126C821A1006F4374 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4A026C821A1006F4374 /* RootViewModel.swift */; };
 		570CB4A326C821B6006F4374 /* RootViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4A226C821B6006F4374 /* RootViewModelProtocol.swift */; };
+		570CB4A626C8C46D006F4374 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4A526C8C46C006F4374 /* NetworkManagerProtocol.swift */; };
+		570CB4A826C8C4AF006F4374 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4A726C8C4AF006F4374 /* NetworkManager.swift */; };
+		570CB4AB26C8FBFB006F4374 /* ErrorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4AA26C8FBFA006F4374 /* ErrorUtils.swift */; };
 		77B03336E68746E4AEC05C19 /* Pods_Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7AB03774765386F871892D /* Pods_Gallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		570CB49E26C82176006F4374 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		570CB4A026C821A1006F4374 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		570CB4A226C821B6006F4374 /* RootViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelProtocol.swift; sourceTree = "<group>"; };
+		570CB4A526C8C46C006F4374 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		570CB4A726C8C4AF006F4374 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		570CB4AA26C8FBFA006F4374 /* ErrorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorUtils.swift; sourceTree = "<group>"; };
 		5A7AB03774765386F871892D /* Pods_Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BDE4F7F13A99FB5B8CA1A4 /* Pods-Gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gallery.debug.xcconfig"; path = "Target Support Files/Pods-Gallery/Pods-Gallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +99,7 @@
 		570CB46726C7D0CC006F4374 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				570CB4A926C8FBE4006F4374 /* Utils */,
 				570CB47B26C7E63D006F4374 /* Managers */,
 				570CB47A26C7E633006F4374 /* Services */,
 				570CB46826C7D0CC006F4374 /* UI */,
@@ -150,6 +157,7 @@
 		570CB47B26C7E63D006F4374 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				570CB4A426C8C442006F4374 /* Network */,
 				570CB48D26C816C6006F4374 /* Auth */,
 			);
 			path = Managers;
@@ -194,6 +202,23 @@
 				570CB4A226C821B6006F4374 /* RootViewModelProtocol.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		570CB4A426C8C442006F4374 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				570CB4A526C8C46C006F4374 /* NetworkManagerProtocol.swift */,
+				570CB4A726C8C4AF006F4374 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		570CB4A926C8FBE4006F4374 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				570CB4AA26C8FBFA006F4374 /* ErrorUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BE31354FCC0BF0FEEF7CB0EF /* Frameworks */ = {
@@ -333,14 +358,17 @@
 				570CB49426C81B6B006F4374 /* AuthView.swift in Sources */,
 				570CB48226C7E8E3006F4374 /* ApiService.swift in Sources */,
 				570CB47226C7D0CC006F4374 /* GalleryApp.swift in Sources */,
+				570CB4AB26C8FBFB006F4374 /* ErrorUtils.swift in Sources */,
 				570CB49A26C81F8E006F4374 /* MainViewModelProtocol.swift in Sources */,
 				570CB47726C7DB45006F4374 /* MainView.swift in Sources */,
 				570CB49F26C82176006F4374 /* RootView.swift in Sources */,
 				570CB48A26C7F694006F4374 /* DefaultApiDefinition.swift in Sources */,
 				570CB47926C7E5D1006F4374 /* Config.swift in Sources */,
+				570CB4A826C8C4AF006F4374 /* NetworkManager.swift in Sources */,
 				570CB4A326C821B6006F4374 /* RootViewModelProtocol.swift in Sources */,
 				570CB48F26C81A48006F4374 /* AuthManagerProtocol.swift in Sources */,
 				570CB49126C81A5C006F4374 /* AuthManager.swift in Sources */,
+				570CB4A626C8C46D006F4374 /* NetworkManagerProtocol.swift in Sources */,
 				570CB48626C7F411006F4374 /* DefaultAuth.swift in Sources */,
 				570CB49626C81B7D006F4374 /* AuthViewModel.swift in Sources */,
 				570CB48C26C80049006F4374 /* MainViewModel.swift in Sources */,

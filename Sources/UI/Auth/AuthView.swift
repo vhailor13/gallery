@@ -16,14 +16,14 @@ struct AuthView<T: AuthViewModelProtocol>: View {
     
     var body: some View {
         ZStack {
-            //Color.white
             VStack {
                 VStack(alignment: .leading) {
-                    TextField("Email", text: viewModel.email)
+                    TextField("Email", text: $viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                    SecureField("Password", text: viewModel.password)
+                        
+                    SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
                 }.padding(EdgeInsets(top: 0.0, leading: 12.0, bottom: 0.0, trailing: 12.0))
                 
                 Button {
@@ -33,6 +33,24 @@ struct AuthView<T: AuthViewModelProtocol>: View {
                         .foregroundColor(.blue)
                 }
             }
+            
+            if viewModel.isInProgress {
+                authProgressView()
+            }
+        }.alert(isPresented: $viewModel.isErrorOccured) {
+            Alert(
+                title: Text("Error"),
+                message: Text(viewModel.error?.localizedDescription ?? ""),
+                dismissButton: .default(Text("OK")))
+        }
+    }
+    
+     // MARK: -
+    
+    private func authProgressView() -> some View {
+        ZStack {
+            Color.black.opacity(0.85)
+            ProgressView()
         }
     }
 }

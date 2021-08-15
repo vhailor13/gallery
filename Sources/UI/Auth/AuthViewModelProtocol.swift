@@ -9,8 +9,12 @@ import RxSwift
 import SwiftUI
 
 protocol AuthViewModelProtocol: ObservableObject {
-    var email: Binding<String> { get }
-    var password: Binding<String> { get }
+    var email: String { get set }
+    var password: String { get set }
+    
+    var error: Error? { get }
+    var isErrorOccured: Bool { get set }
+    var isInProgress: Bool { get }
     
     func signIn()
 }

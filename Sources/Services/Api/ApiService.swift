@@ -51,6 +51,8 @@ class ApiService: ApiServiceProtocol {
                                     
                                     self.isAuthorizedRelay.accept(true)
                                 }
+                            } else {
+                                completable(.error(NSError.create("Wrong credentials.")))
                             }
                             
                             
