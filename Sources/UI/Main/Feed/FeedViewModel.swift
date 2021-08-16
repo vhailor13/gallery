@@ -21,6 +21,13 @@ class FeedViewModel: FeedViewModelProtocol {
         self.feedManager = container.resolve(FeedManagerProtocol.self)!
         
         self.setupBindings()
+        
+        // First page fetching
+        self.feedManager.fetchNext()
+    }
+    
+    func fetchNext() {
+        self.feedManager.fetchNext()
     }
     
     // MARK: -

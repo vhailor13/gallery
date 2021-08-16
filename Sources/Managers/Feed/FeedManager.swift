@@ -53,7 +53,10 @@ class FeedManager: FeedManagerProtocol {
                 guard let recordsArray = photosDict["records"] as? [[String: Any]] else { return }
                 
                 let records = recordsArray.compactMap({ FeedPhotoEntity.parse($0) })
-                self.photosRelay.accept(records)
+                var currentRecords = self.photosRelay.value
+                currentRecords.append(contentsOf: records)
+                
+                self.photosRelay.accept(currentRecords)
                 self.updatePhotosMap(records)
             }).disposed(by: self.disposeBag)
     }

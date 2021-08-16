@@ -20,5 +20,6 @@ struct FeedPhotoView<T: FeedPhotoViewModelProtocol>: View {
         KFImage(viewModel.url)
             .resizable()
             .aspectRatio(contentMode: .fill)
+            .clipped()
     }
 }

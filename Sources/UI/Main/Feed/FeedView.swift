@@ -17,8 +17,17 @@ struct FeedView<T: FeedViewModelProtocol>: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.photos, id: \.self.id) {
-                FeedPhotoView(FeedPhotoViewModel($0.id))
+            ForEach(viewModel.photos, id: \.self.id) { photo in
+                FeedPhotoView(FeedPhotoViewModel(photo.id))
+                    .onAppear(perform: {
+                        // Using simple criteria for nextPage fetching
+                        
+                        guard let lastId = viewModel.photos.last?.id else { return }
+                        guard lastId == photo.id else { return }
+                        
+                        viewModel.fetchNext()
+                    })
+                    //.frame(height: 88.0)
             }
         }
     }

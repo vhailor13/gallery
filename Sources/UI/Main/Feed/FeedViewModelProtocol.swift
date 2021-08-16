@@ -9,4 +9,6 @@ import Combine
 
 protocol FeedViewModelProtocol: ObservableObject {
     var photos: [FeedPhotoEntity] { get }
+    
+    func fetchNext()
 }
