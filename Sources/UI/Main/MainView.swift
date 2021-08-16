@@ -18,6 +18,7 @@ struct MainView<T: MainViewModelProtocol>: View {
     var body: some View {
         VStack {
             FeedView(FeedViewModel())
+                .edgesIgnoringSafeArea(.all)
         }.alert(isPresented: $viewModel.isErrorOccured) {
             Alert(
                 title: Text("Error"),

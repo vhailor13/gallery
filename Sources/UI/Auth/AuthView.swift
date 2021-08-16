@@ -36,6 +36,7 @@ struct AuthView<T: AuthViewModelProtocol>: View {
             
             if viewModel.isInProgress {
                 authProgressView()
+                    .edgesIgnoringSafeArea(.all)
             }
         }.alert(isPresented: $viewModel.isErrorOccured) {
             Alert(
@@ -51,6 +52,7 @@ struct AuthView<T: AuthViewModelProtocol>: View {
         ZStack {
             Color.black.opacity(0.85)
             ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: .white))
         }
     }
 }
