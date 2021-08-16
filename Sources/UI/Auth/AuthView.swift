@@ -54,3 +54,23 @@ struct AuthView<T: AuthViewModelProtocol>: View {
         }
     }
 }
+
+// In general every component can be tested via stubbing related protocols
+// E.g. previews can be generated via stubbing ViewModel
+
+class AuthViewModelStub: AuthViewModelProtocol {
+    @Published var email: String = "test@email.com"
+    @Published var password: String = "testpassword"
+    
+    @Published var error: Error? = nil
+    var isErrorOccured: Bool = false
+    @Published var isInProgress: Bool = false
+    
+    func signIn() {}
+}
+
+struct AuthView_Previews: PreviewProvider {
+    static var previews: some View {
+        AuthView(AuthViewModelStub())
+    }
+}
