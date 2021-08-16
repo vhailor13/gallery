@@ -9,4 +9,6 @@ import Foundation
 
 class Config {
     static let apiUrlStr: String = "https://core-graphql.dev.waldo.photos/gql"
+    
+    static let fetchLimit: Int = 12
 }

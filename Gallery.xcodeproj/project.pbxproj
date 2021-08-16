@@ -30,6 +30,18 @@
 		570CB4A626C8C46D006F4374 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4A526C8C46C006F4374 /* NetworkManagerProtocol.swift */; };
 		570CB4A826C8C4AF006F4374 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4A726C8C4AF006F4374 /* NetworkManager.swift */; };
 		570CB4AB26C8FBFB006F4374 /* ErrorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4AA26C8FBFA006F4374 /* ErrorUtils.swift */; };
+		570CB4AE26C94CB8006F4374 /* FeedManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4AD26C94CB8006F4374 /* FeedManagerProtocol.swift */; };
+		570CB4B026C94CD8006F4374 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4AF26C94CD8006F4374 /* FeedManager.swift */; };
+		570CB4B226C95171006F4374 /* FeedPhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4B126C95170006F4374 /* FeedPhotoEntity.swift */; };
+		57E3605926CA50E000BEBB45 /* FeedThumbnailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3605826CA50E000BEBB45 /* FeedThumbnailEntity.swift */; };
+		57E3605C26CA55AB00BEBB45 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3605B26CA55AB00BEBB45 /* FeedView.swift */; };
+		57E3605E26CA55BE00BEBB45 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3605D26CA55BE00BEBB45 /* FeedViewModel.swift */; };
+		57E3606026CA55E000BEBB45 /* FeedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3605F26CA55E000BEBB45 /* FeedPhotoView.swift */; };
+		57E3606226CA55F600BEBB45 /* FeedPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3606126CA55F600BEBB45 /* FeedPhotoViewModel.swift */; };
+		57E3606426CA568700BEBB45 /* FeedViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3606326CA568700BEBB45 /* FeedViewModelProtocol.swift */; };
+		57E3606626CA56A900BEBB45 /* FeedPhotoViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3606526CA56A900BEBB45 /* FeedPhotoViewModelProtocol.swift */; };
+		57E3606B26CA810A00BEBB45 /* PhotosLoaderManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3606A26CA810A00BEBB45 /* PhotosLoaderManagerProtocol.swift */; };
+		57E3606D26CA812B00BEBB45 /* PhotosLoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3606C26CA812B00BEBB45 /* PhotosLoaderManager.swift */; };
 		77B03336E68746E4AEC05C19 /* Pods_Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7AB03774765386F871892D /* Pods_Gallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +72,18 @@
 		570CB4A526C8C46C006F4374 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		570CB4A726C8C4AF006F4374 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		570CB4AA26C8FBFA006F4374 /* ErrorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorUtils.swift; sourceTree = "<group>"; };
+		570CB4AD26C94CB8006F4374 /* FeedManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManagerProtocol.swift; sourceTree = "<group>"; };
+		570CB4AF26C94CD8006F4374 /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
+		570CB4B126C95170006F4374 /* FeedPhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPhotoEntity.swift; sourceTree = "<group>"; };
+		57E3605826CA50E000BEBB45 /* FeedThumbnailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedThumbnailEntity.swift; sourceTree = "<group>"; };
+		57E3605B26CA55AB00BEBB45 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		57E3605D26CA55BE00BEBB45 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		57E3605F26CA55E000BEBB45 /* FeedPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPhotoView.swift; sourceTree = "<group>"; };
+		57E3606126CA55F600BEBB45 /* FeedPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPhotoViewModel.swift; sourceTree = "<group>"; };
+		57E3606326CA568700BEBB45 /* FeedViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelProtocol.swift; sourceTree = "<group>"; };
+		57E3606526CA56A900BEBB45 /* FeedPhotoViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPhotoViewModelProtocol.swift; sourceTree = "<group>"; };
+		57E3606A26CA810A00BEBB45 /* PhotosLoaderManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosLoaderManagerProtocol.swift; sourceTree = "<group>"; };
+		57E3606C26CA812B00BEBB45 /* PhotosLoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosLoaderManager.swift; sourceTree = "<group>"; };
 		5A7AB03774765386F871892D /* Pods_Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BDE4F7F13A99FB5B8CA1A4 /* Pods-Gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gallery.debug.xcconfig"; path = "Target Support Files/Pods-Gallery/Pods-Gallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +146,7 @@
 		570CB46926C7D0CC006F4374 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				57E3605A26CA559700BEBB45 /* Feed */,
 				570CB47626C7DB45006F4374 /* MainView.swift */,
 				570CB48B26C80048006F4374 /* MainViewModel.swift */,
 				570CB49926C81F8E006F4374 /* MainViewModelProtocol.swift */,
@@ -157,6 +182,8 @@
 		570CB47B26C7E63D006F4374 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				57E3606926CA7F9800BEBB45 /* PhotosLoader */,
+				570CB4AC26C94C7F006F4374 /* Feed */,
 				570CB4A426C8C442006F4374 /* Network */,
 				570CB48D26C816C6006F4374 /* Auth */,
 			);
@@ -219,6 +246,39 @@
 				570CB4AA26C8FBFA006F4374 /* ErrorUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		570CB4AC26C94C7F006F4374 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				570CB4AD26C94CB8006F4374 /* FeedManagerProtocol.swift */,
+				570CB4AF26C94CD8006F4374 /* FeedManager.swift */,
+				570CB4B126C95170006F4374 /* FeedPhotoEntity.swift */,
+				57E3605826CA50E000BEBB45 /* FeedThumbnailEntity.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		57E3605A26CA559700BEBB45 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				57E3605B26CA55AB00BEBB45 /* FeedView.swift */,
+				57E3605D26CA55BE00BEBB45 /* FeedViewModel.swift */,
+				57E3606326CA568700BEBB45 /* FeedViewModelProtocol.swift */,
+				57E3605F26CA55E000BEBB45 /* FeedPhotoView.swift */,
+				57E3606126CA55F600BEBB45 /* FeedPhotoViewModel.swift */,
+				57E3606526CA56A900BEBB45 /* FeedPhotoViewModelProtocol.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		57E3606926CA7F9800BEBB45 /* PhotosLoader */ = {
+			isa = PBXGroup;
+			children = (
+				57E3606A26CA810A00BEBB45 /* PhotosLoaderManagerProtocol.swift */,
+				57E3606C26CA812B00BEBB45 /* PhotosLoaderManager.swift */,
+			);
+			path = PhotosLoader;
 			sourceTree = "<group>";
 		};
 		BE31354FCC0BF0FEEF7CB0EF /* Frameworks */ = {
@@ -354,23 +414,35 @@
 				570CB4A126C821A1006F4374 /* RootViewModel.swift in Sources */,
 				570CB48426C7F18E006F4374 /* DefaultQuery.swift in Sources */,
 				570CB48026C7E8D2006F4374 /* ApiServiceProtocol.swift in Sources */,
+				57E3606D26CA812B00BEBB45 /* PhotosLoaderManager.swift in Sources */,
 				570CB49826C81EB5006F4374 /* AuthViewModelProtocol.swift in Sources */,
 				570CB49426C81B6B006F4374 /* AuthView.swift in Sources */,
+				57E3606626CA56A900BEBB45 /* FeedPhotoViewModelProtocol.swift in Sources */,
+				57E3606226CA55F600BEBB45 /* FeedPhotoViewModel.swift in Sources */,
+				57E3605926CA50E000BEBB45 /* FeedThumbnailEntity.swift in Sources */,
 				570CB48226C7E8E3006F4374 /* ApiService.swift in Sources */,
 				570CB47226C7D0CC006F4374 /* GalleryApp.swift in Sources */,
 				570CB4AB26C8FBFB006F4374 /* ErrorUtils.swift in Sources */,
 				570CB49A26C81F8E006F4374 /* MainViewModelProtocol.swift in Sources */,
+				57E3605C26CA55AB00BEBB45 /* FeedView.swift in Sources */,
+				57E3606426CA568700BEBB45 /* FeedViewModelProtocol.swift in Sources */,
 				570CB47726C7DB45006F4374 /* MainView.swift in Sources */,
 				570CB49F26C82176006F4374 /* RootView.swift in Sources */,
+				570CB4B226C95171006F4374 /* FeedPhotoEntity.swift in Sources */,
 				570CB48A26C7F694006F4374 /* DefaultApiDefinition.swift in Sources */,
+				57E3606026CA55E000BEBB45 /* FeedPhotoView.swift in Sources */,
 				570CB47926C7E5D1006F4374 /* Config.swift in Sources */,
 				570CB4A826C8C4AF006F4374 /* NetworkManager.swift in Sources */,
+				57E3605E26CA55BE00BEBB45 /* FeedViewModel.swift in Sources */,
 				570CB4A326C821B6006F4374 /* RootViewModelProtocol.swift in Sources */,
+				57E3606B26CA810A00BEBB45 /* PhotosLoaderManagerProtocol.swift in Sources */,
 				570CB48F26C81A48006F4374 /* AuthManagerProtocol.swift in Sources */,
 				570CB49126C81A5C006F4374 /* AuthManager.swift in Sources */,
 				570CB4A626C8C46D006F4374 /* NetworkManagerProtocol.swift in Sources */,
 				570CB48626C7F411006F4374 /* DefaultAuth.swift in Sources */,
+				570CB4AE26C94CB8006F4374 /* FeedManagerProtocol.swift in Sources */,
 				570CB49626C81B7D006F4374 /* AuthViewModel.swift in Sources */,
+				570CB4B026C94CD8006F4374 /* FeedManager.swift in Sources */,
 				570CB48C26C80049006F4374 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

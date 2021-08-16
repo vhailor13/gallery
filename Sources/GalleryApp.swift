@@ -38,5 +38,17 @@ struct GalleryApp: App {
         container.register(AuthManagerProtocol.self) { _ in
             AuthManager.shared
         }
+        
+        container.register(NetworkManagerProtocol.self) { _ in
+            NetworkManager.shared
+        }
+        
+        container.register(FeedManagerProtocol.self) { _ in
+            FeedManager.shared
+        }
+        
+        container.register(PhotosLoaderManagerProtocol.self) { _ in
+            PhotosLoaderManager.shared
+        }
     }
 }

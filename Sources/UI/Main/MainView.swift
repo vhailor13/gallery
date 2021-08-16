@@ -16,7 +16,14 @@ struct MainView<T: MainViewModelProtocol>: View {
     @ObservedObject var viewModel: T
     
     var body: some View {
-        return Text("Main")
+        VStack {
+            FeedView(FeedViewModel())
+        }.alert(isPresented: $viewModel.isErrorOccured) {
+            Alert(
+                title: Text("Error"),
+                message: Text(viewModel.error?.localizedDescription ?? ""),
+                dismissButton: .default(Text("OK")))
+        }
     }
     
 }

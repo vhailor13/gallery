@@ -7,5 +7,6 @@ target 'Gallery' do
 	pod 'RxSwift'
 	pod 'RxRelay'
 	pod 'Swinject'
+    pod 'Kingfisher/SwiftUI'
 
 end

@@ -44,11 +44,7 @@ class ApiService: ApiServiceProtocol {
                             
                             // Storing token if available
                             if let account = dataResults["accountLogin"] as? [String: Any] {
-                                if let token = account["auth_token"] as? String {
-                                    self.auth.jwt = token
-                                    
-                                    self.networkCtrl = GQLNetworkController(apiDefinition: DefaultApiDefinition(authorization: self.auth))
-                                    
+                                if let _ = account["auth_token"] as? String {
                                     self.isAuthorizedRelay.accept(true)
                                 }
                             } else {

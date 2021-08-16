@@ -8,5 +8,7 @@
 import Combine
 
 protocol MainViewModelProtocol: ObservableObject {
-    
+    var photos: [FeedPhotoEntity] { get }
+    var error: Error? { get }
+    var isErrorOccured: Bool { get set }
 }
