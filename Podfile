@@ -3,7 +3,7 @@
 target 'Gallery' do
 	 use_frameworks!
 
-	pod 'GraphQL-Swift'
+	pod 'Apollo'
 	pod 'RxSwift'
 	pod 'RxRelay'
 	pod 'Swinject'

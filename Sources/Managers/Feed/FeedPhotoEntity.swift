@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Apollo
 
 struct FeedPhotoEntity {
     let id: String
@@ -15,12 +16,9 @@ struct FeedPhotoEntity {
 // MARK: - JSON parsing
 
 extension FeedPhotoEntity {
-    static func parse(_ dict: [String: Any]) -> FeedPhotoEntity? {
-        guard let id = dict["id"] as? String else { return nil }
-        guard let thumbnailsArray = dict["thumbnail_urls"] as? [[String: Any]] else { return nil }
+    static func create(ghqlEntity: PhotoFeedQuery.Data.Album.Photo.Record) -> FeedPhotoEntity {
+        let thumbnailsGhql = ghqlEntity.thumbnailUrls?.compactMap({ $0 }) ?? []
         
-        let thumbnails = thumbnailsArray.compactMap({ FeedThumbnailEntity.parse($0) })
-        
-        return FeedPhotoEntity(id: id, thumbnails: thumbnails)
+        return FeedPhotoEntity(id: ghqlEntity.id, thumbnails: thumbnailsGhql.compactMap({ FeedThumbnailEntity.create(ghqlEntity: $0) }) )
     }
 }

@@ -6,9 +6,10 @@
 //
 
 import RxSwift
+import Apollo
 
 protocol NetworkManagerProtocol {
     var error: Observable<Error> { get }
     
-    func fetch(_ query: String) -> Single<[String: Any]>
+    func fetch<Query: GraphQLQuery>(_ query: Query) -> Single<Query.Data?>
 }

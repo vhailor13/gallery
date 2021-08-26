@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Apollo
 
 class NetworkManager: NetworkManagerProtocol {
     static let shared = NetworkManager()
@@ -24,7 +25,7 @@ class NetworkManager: NetworkManagerProtocol {
         self.apiService = container.resolve(ApiServiceProtocol.self)!
     }
     
-    func fetch(_ query: String) -> Single<[String: Any]> {
+    func fetch<Query: GraphQLQuery>(_ query: Query) -> Single<Query.Data?> {
         return self.apiService.fetch(query).do(onError: { [unowned self] error in
             self.errorSubject.on(.next(error))
         })

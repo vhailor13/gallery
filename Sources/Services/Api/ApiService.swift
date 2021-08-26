@@ -5,9 +5,9 @@
 //  Created by Victor Sukochev on 14.08.2021.
 //
 
-import GraphQL_Swift
 import RxSwift
 import RxRelay
+import Apollo
 
 class ApiService: ApiServiceProtocol {
     static let shared = ApiService()
@@ -16,8 +16,7 @@ class ApiService: ApiServiceProtocol {
         return self.isAuthorizedRelay.asObservable()
     }
     
-    private var auth = DefaultAuth()
-    private var networkCtrl = GQLNetworkController(apiDefinition: DefaultApiDefinition())
+    private let apollo = ApolloClient(url: URL(string: Config.apiUrlStr)!)
     
     private var isAuthorizedRelay = BehaviorRelay<Bool>(value: false)
     
@@ -26,81 +25,51 @@ class ApiService: ApiServiceProtocol {
     
     func login(email: String, password: String) -> Completable {
         return Completable.create { completable in
-            let query = DefaultQuery("""
-                mutation {
-                  accountLogin(input: { email: \"\(email)\", password: \"\(password)\" }) {
-                    success
-                    auth_token
-                  }
-                }
-                """)
-            
-            do {
-                let dataTask = try self.networkCtrl.makeGraphQLRequest(query) { [unowned self] results in
-                    switch results {
-                    case .success(let jsonResults):
-                        do {
-                            let dataResults = try jsonResults.parseDataKey()
-                            
-                            // Storing token if available
-                            if let account = dataResults["accountLogin"] as? [String: Any] {
-                                if let _ = account["auth_token"] as? String {
-                                    self.isAuthorizedRelay.accept(true)
-                                }
-                            } else {
-                                completable(.error(NSError.create("Wrong credentials.")))
-                            }
-                            
-                            
-                            completable(.completed)
-                        } catch {
-                            completable(.error(error))
-                        }
-                        break
-                        
-                    case .fail(let error):
+            self.apollo.perform(mutation: LoginMutation(email: email, password: password)) { result in
+                switch result {
+                case .success(let result):
+                    if let error = result.errors?.first {
+                        self.isAuthorizedRelay.accept(false)
                         completable(.error(error))
                         break
                     }
+                    
+                    self.isAuthorizedRelay.accept(true)
+                    completable(.completed)
+                    break
+                    
+                case .failure(let error):
+                    self.isAuthorizedRelay.accept(false)
+                    completable(.error(error))
+                    break
                 }
-                
-                dataTask.resume()
-            } catch {
-                completable(.error(error))
             }
             
             return Disposables.create()
         }
     }
     
-    func fetch(_ query: String) -> Single<[String: Any]> {
-       return Single<[String: Any]>.create { single in
-            let query = DefaultQuery(query)
-            
-            do {
-                let dataTask = try self.networkCtrl.makeGraphQLRequest(query) { results in
-                    switch results {
-                    case .success(let jsonResults):
-                        do {
-                            let dataResults = try jsonResults.parseDataKey()
-                            
-                            single(.success(dataResults))
-                        } catch {
-                            single(.failure(error))
-                        }
-                        break
-                        
-                    case .fail(let error):
+    func fetch<Query: GraphQLQuery>(_ query: Query) -> Single<Query.Data?> {
+       return Single<Query.Data?>.create { single in
+        
+            self.apollo.fetch(query: query) { result in
+                switch result {
+                case .success(let result):
+                    if let error = result.errors?.first {
                         single(.failure(error))
                         break
                     }
+                    
+                    single(.success(result.data))
+                    break
+                    
+                case .failure(let error):
+                    single(.failure(error))
+                    break
+                    
                 }
-                
-                dataTask.resume()
-            } catch {
-                single(.failure(error))
             }
-            
+        
             return Disposables.create()
         }
     }

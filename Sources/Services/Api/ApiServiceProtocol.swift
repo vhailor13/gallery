@@ -6,10 +6,11 @@
 //
 
 import RxSwift
+import Apollo
 
 protocol ApiServiceProtocol {
     var isAuthorized: Observable<Bool> { get }
     
     func login(email: String, password: String) -> Completable
-    func fetch(_ query: String) -> Single<[String: Any]>
+    func fetch<Query: GraphQLQuery>(_ query: Query) -> Single<Query.Data?>
 }

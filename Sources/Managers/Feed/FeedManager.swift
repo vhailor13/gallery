@@ -29,35 +29,16 @@ class FeedManager: FeedManagerProtocol {
     }
     
     func fetchNext() {
-        self.networkManager.fetch("""
-            query {
-              album(id: "exHbvthJfbuFwiusSJuVAm") {
-                id
-                name
-                photos(slice: { limit: \(Config.fetchLimit), offset: \(self.photosRelay.value.count) }, for_web_gallery: true) {
-                  records {
-                    id
-                    thumbnail_urls {
-                      size_code
-                      height
-                      width
-                      url
-                    }
-                  }
-                }
-              }
-            }
-            """).subscribe(onSuccess: { [unowned self] result in
-                guard let albumDict = result["album"] as? [String: Any] else { return }
-                guard let photosDict = albumDict["photos"] as? [String: Any] else { return }
-                guard let recordsArray = photosDict["records"] as? [[String: Any]] else { return }
-                
-                let records = recordsArray.compactMap({ FeedPhotoEntity.parse($0) })
-                var currentRecords = self.photosRelay.value
-                currentRecords.append(contentsOf: records)
-                
-                self.photosRelay.accept(currentRecords)
-                self.updatePhotosMap(records)
+        self.networkManager.fetch(PhotoFeedQuery(albumId: "exHbvthJfbuFwiusSJuVAm", limit: Config.fetchLimit, offset: self.photosRelay.value.count)).subscribe(onSuccess: { [unowned self] result in
+            guard let recordsQhql = result?.album?.photos?.records?.compactMap({ $0 }) else { return }
+            
+            let records = recordsQhql.map({ FeedPhotoEntity.create(ghqlEntity: $0) })
+            var currentRecords = self.photosRelay.value
+            currentRecords.append(contentsOf: records)
+
+            self.photosRelay.accept(currentRecords)
+            self.updatePhotosMap(records)
+
             }).disposed(by: self.disposeBag)
     }
     

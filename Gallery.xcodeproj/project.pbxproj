@@ -14,9 +14,6 @@
 		570CB47926C7E5D1006F4374 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB47826C7E5D1006F4374 /* Config.swift */; };
 		570CB48026C7E8D2006F4374 /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB47F26C7E8D2006F4374 /* ApiServiceProtocol.swift */; };
 		570CB48226C7E8E3006F4374 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48126C7E8E3006F4374 /* ApiService.swift */; };
-		570CB48426C7F18E006F4374 /* DefaultQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48326C7F18E006F4374 /* DefaultQuery.swift */; };
-		570CB48626C7F411006F4374 /* DefaultAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48526C7F411006F4374 /* DefaultAuth.swift */; };
-		570CB48A26C7F694006F4374 /* DefaultApiDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48926C7F694006F4374 /* DefaultApiDefinition.swift */; };
 		570CB48C26C80049006F4374 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48B26C80048006F4374 /* MainViewModel.swift */; };
 		570CB48F26C81A48006F4374 /* AuthManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB48E26C81A47006F4374 /* AuthManagerProtocol.swift */; };
 		570CB49126C81A5C006F4374 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB49026C81A5C006F4374 /* AuthManager.swift */; };
@@ -33,6 +30,9 @@
 		570CB4AE26C94CB8006F4374 /* FeedManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4AD26C94CB8006F4374 /* FeedManagerProtocol.swift */; };
 		570CB4B026C94CD8006F4374 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4AF26C94CD8006F4374 /* FeedManager.swift */; };
 		570CB4B226C95171006F4374 /* FeedPhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB4B126C95170006F4374 /* FeedPhotoEntity.swift */; };
+		5770EE1F26D788E000E0E026 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770EE1E26D788E000E0E026 /* API.swift */; };
+		578FA0C426D539F0007F53F9 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 578FA0C326D539F0007F53F9 /* Queries.graphql */; };
+		578FA0C626D5498D007F53F9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 578FA0C526D5498C007F53F9 /* schema.json */; };
 		57E3605926CA50E000BEBB45 /* FeedThumbnailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3605826CA50E000BEBB45 /* FeedThumbnailEntity.swift */; };
 		57E3605C26CA55AB00BEBB45 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3605B26CA55AB00BEBB45 /* FeedView.swift */; };
 		57E3605E26CA55BE00BEBB45 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3605D26CA55BE00BEBB45 /* FeedViewModel.swift */; };
@@ -56,9 +56,6 @@
 		570CB47826C7E5D1006F4374 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		570CB47F26C7E8D2006F4374 /* ApiServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocol.swift; sourceTree = "<group>"; };
 		570CB48126C7E8E3006F4374 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		570CB48326C7F18E006F4374 /* DefaultQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultQuery.swift; sourceTree = "<group>"; };
-		570CB48526C7F411006F4374 /* DefaultAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuth.swift; sourceTree = "<group>"; };
-		570CB48926C7F694006F4374 /* DefaultApiDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultApiDefinition.swift; sourceTree = "<group>"; };
 		570CB48B26C80048006F4374 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		570CB48E26C81A47006F4374 /* AuthManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManagerProtocol.swift; sourceTree = "<group>"; };
 		570CB49026C81A5C006F4374 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -75,6 +72,9 @@
 		570CB4AD26C94CB8006F4374 /* FeedManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManagerProtocol.swift; sourceTree = "<group>"; };
 		570CB4AF26C94CD8006F4374 /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		570CB4B126C95170006F4374 /* FeedPhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPhotoEntity.swift; sourceTree = "<group>"; };
+		5770EE1E26D788E000E0E026 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		578FA0C326D539F0007F53F9 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		578FA0C526D5498C007F53F9 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		57E3605826CA50E000BEBB45 /* FeedThumbnailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedThumbnailEntity.swift; sourceTree = "<group>"; };
 		57E3605B26CA55AB00BEBB45 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		57E3605D26CA55BE00BEBB45 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
@@ -195,9 +195,9 @@
 			children = (
 				570CB47F26C7E8D2006F4374 /* ApiServiceProtocol.swift */,
 				570CB48126C7E8E3006F4374 /* ApiService.swift */,
-				570CB48326C7F18E006F4374 /* DefaultQuery.swift */,
-				570CB48526C7F411006F4374 /* DefaultAuth.swift */,
-				570CB48926C7F694006F4374 /* DefaultApiDefinition.swift */,
+				578FA0C326D539F0007F53F9 /* Queries.graphql */,
+				578FA0C526D5498C007F53F9 /* schema.json */,
+				5770EE1E26D788E000E0E026 /* API.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -305,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 570CB46426C7C72A006F4374 /* Build configuration list for PBXNativeTarget "Gallery" */;
 			buildPhases = (
+				578FA0C726D549F9007F53F9 /* ShellScript */,
 				2B28EC41D02A5F36B56FD02F /* [CP] Check Pods Manifest.lock */,
 				570CB45126C7C725006F4374 /* Sources */,
 				570CB45226C7C725006F4374 /* Frameworks */,
@@ -357,6 +358,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578FA0C626D5498D007F53F9 /* schema.json in Resources */,
+				578FA0C426D539F0007F53F9 /* Queries.graphql in Resources */,
 				570CB47426C7D0CC006F4374 /* Assets.xcassets in Resources */,
 				570CB47526C7D0CC006F4374 /* Preview Assets.xcassets in Resources */,
 			);
@@ -404,6 +407,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		578FA0C726D549F9007F53F9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./Sources/Services/Api/*.graphql --localSchemaFile=\"./Sources/Services/Api/schema.json\" API.swift\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -412,7 +432,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				570CB4A126C821A1006F4374 /* RootViewModel.swift in Sources */,
-				570CB48426C7F18E006F4374 /* DefaultQuery.swift in Sources */,
 				570CB48026C7E8D2006F4374 /* ApiServiceProtocol.swift in Sources */,
 				57E3606D26CA812B00BEBB45 /* PhotosLoaderManager.swift in Sources */,
 				570CB49826C81EB5006F4374 /* AuthViewModelProtocol.swift in Sources */,
@@ -429,17 +448,16 @@
 				570CB47726C7DB45006F4374 /* MainView.swift in Sources */,
 				570CB49F26C82176006F4374 /* RootView.swift in Sources */,
 				570CB4B226C95171006F4374 /* FeedPhotoEntity.swift in Sources */,
-				570CB48A26C7F694006F4374 /* DefaultApiDefinition.swift in Sources */,
 				57E3606026CA55E000BEBB45 /* FeedPhotoView.swift in Sources */,
 				570CB47926C7E5D1006F4374 /* Config.swift in Sources */,
 				570CB4A826C8C4AF006F4374 /* NetworkManager.swift in Sources */,
 				57E3605E26CA55BE00BEBB45 /* FeedViewModel.swift in Sources */,
 				570CB4A326C821B6006F4374 /* RootViewModelProtocol.swift in Sources */,
 				57E3606B26CA810A00BEBB45 /* PhotosLoaderManagerProtocol.swift in Sources */,
+				5770EE1F26D788E000E0E026 /* API.swift in Sources */,
 				570CB48F26C81A48006F4374 /* AuthManagerProtocol.swift in Sources */,
 				570CB49126C81A5C006F4374 /* AuthManager.swift in Sources */,
 				570CB4A626C8C46D006F4374 /* NetworkManagerProtocol.swift in Sources */,
-				570CB48626C7F411006F4374 /* DefaultAuth.swift in Sources */,
 				570CB4AE26C94CB8006F4374 /* FeedManagerProtocol.swift in Sources */,
 				570CB49626C81B7D006F4374 /* AuthViewModel.swift in Sources */,
 				570CB4B026C94CD8006F4374 /* FeedManager.swift in Sources */,

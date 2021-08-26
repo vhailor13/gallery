@@ -16,11 +16,10 @@ struct FeedThumbnailEntity {
 // MARK: - JSON parsing
 
 extension FeedThumbnailEntity {
-    static func parse(_ dict: [String: Any]) -> FeedThumbnailEntity? {
-        guard let urlStr = dict["url"] as? String else { return nil }
-        guard let url = URL(string: urlStr) else { return nil}
-        guard let width = dict["width"] as? Int else { return nil }
-        guard let height = dict["height"] as? Int else { return nil }
+    static func create(ghqlEntity: PhotoFeedQuery.Data.Album.Photo.Record.ThumbnailUrl) -> FeedThumbnailEntity? {
+        guard let urlStr = ghqlEntity.url, let url = URL(string: urlStr) else { return nil }
+        guard let width = ghqlEntity.width else { return nil }
+        guard let height = ghqlEntity.height else { return nil }
         
         return FeedThumbnailEntity(width: width, height: height, url: url)
     }

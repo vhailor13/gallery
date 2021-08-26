@@ -1,0 +1,25 @@
+
+mutation Login($email: String!, $password: String!) {
+  accountLogin(input: {email: $email, password: $password}) {
+    success
+    auth_token
+  }
+}
+
+query PhotoFeed($albumId: RecordID!, $limit: Int!, $offset: Int!) {
+  album(id: $albumId) {
+    id
+    name
+    photos(slice: {limit: $limit, offset: $offset}, for_web_gallery: true) {
+      records {
+        id
+        thumbnail_urls {
+          size_code
+          height
+          width
+          url
+        }
+      }
+    }
+  }
+}
